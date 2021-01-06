@@ -1,2 +1,2 @@
-# proyect-inabilities
-Aplicación hecha con react sobre incapacidades de empleados
+# Proyecto prueba
+Aplicación hecha con react
