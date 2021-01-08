@@ -1,0 +1,10 @@
+.Menu {
+    display: flex;
+    justify-content: center;
+    background-color: teal;
+}
+
+#links {
+    text-decoration: none;
+    color: thistle;
+}
