@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Routing from './Containers/Routing';
 
 function App() {
   return (
@@ -9,11 +10,7 @@ function App() {
       </header>
       
       <main>
-        <div>
-          <p>
-            Hola, estoy usando React.js
-          </p>
-        </div>
+        <Routing />
       </main>
 
     </div>
