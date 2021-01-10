@@ -1,10 +1,22 @@
 .Menu {
     display: flex;
-    justify-content: center;
-    background-color: teal;
+    font-size: 18px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: #282c34;
+    min-height: 10vh;
+    color: rgb(97, 233, 158);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+p {
+    font-size: 20px;
+    margin-right: 30%;
 }
 
 #links {
     text-decoration: none;
-    color: thistle;
+    color: rgb(97, 233, 158);
+    margin-left: 5px;
 }

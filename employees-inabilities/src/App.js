@@ -1,18 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
 import Routing from './Containers/Routing';
+import { HashRouter } from "react-router-dom";
+import Menu from './Containers/Routing/menu';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header>
+      <div>
+          <HashRouter>
+              <Menu />
+          </HashRouter>
+        </div>
       </header>
       
       <main>
         <Routing />
       </main>
-
     </div>
   );
 }
