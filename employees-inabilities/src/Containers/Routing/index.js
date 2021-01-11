@@ -1,10 +1,7 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from "react-router-dom" 
-import Employees from '../../Components/employees';
-import APIFetching from '../APIFetching';
-import Example3 from '../ExampleJSX';
-import Valores from '../ExampleJSX/valor';
-//import Menu from './menu';
+import Employees from "../../Components/employees";
+import Inabilities from "../../Components/table-inabilities/inabilities";
 
 function Routing() {
     return (
@@ -12,16 +9,10 @@ function Routing() {
             <HashRouter>
                 <Switch>
                     <Route exact path="/">
-                        <Valores />
-                    </Route>
-                    <Route path="/jsx">
-                        <Example3 />
-                    </Route>
-                    <Route path="/api">
-                        <APIFetching />
-                    </Route>
-                    <Route path="/employees">
                         <Employees />
+                    </Route>
+                    <Route path="/inabilities">
+                        <Inabilities />
                     </Route>
                 </Switch>
             </HashRouter>

@@ -1,7 +1,4 @@
 import './App.css';
-import Routing from './Containers/Routing';
-import { HashRouter } from "react-router-dom";
-import Menu from './Containers/Routing/menu';
 import React, {useState, useEffect} from 'react';
 import fire from "./Components/login/firebase";
 import Login from "./Components/login/login-app";
@@ -14,24 +11,25 @@ function App() {
   const [password, setPassword] = useState("")
   const [emailError, setEmailError] = useState("")
   const [passwordError, setPasswordError] = useState("")
-  const [hasAccount, setHasAccount] = useState('false')
+  const [hasAccount, setHasAccount] = useState("false")
 
   const clearInputs = () => {
-    setEmail("")
-    setPassword("")
+    setEmail('')
+    setPassword('')
   }
 
   const clearErrors = () => {
-    setEmailError("")
-    setPasswordError("")
+    setEmailError('')
+    setPasswordError('')
   }
 
   const handleLogin = () => {
     clearErrors()
     fire
       .auth()
-      .signInWithEmailAndPassword(email,password)
+      .signInWithEmailAndPassword(email, password)
       .catch((err) => {
+        // eslint-disable-next-line default-case
         switch (err.code) {
           case "auth/invalid-email":
           case "auth/user-disabled":
@@ -41,8 +39,6 @@ function App() {
           case "auth/wrong-password":
             setPasswordError(err.message)
             break;
-          default:
-            break;
         }
       })
   }
@@ -51,8 +47,9 @@ function App() {
     clearErrors()
     fire
       .auth()
-      .createUserWithEmailAndPassword(email,password)
+      .createUserWithEmailAndPassword(email, password)
       .catch((err) => {
+        // eslint-disable-next-line default-case
         switch (err.code) {
           case "auth/email-already-in-use":
           case "auth/invalid-email":
@@ -60,8 +57,6 @@ function App() {
             break;
           case "auth/weak-password":
             setPasswordError(err.message)
-            break;
-          default:
             break;
         }
       })
@@ -73,8 +68,8 @@ function App() {
 
   const authListener = () => {
     fire.auth().onAuthStateChanged(user => {
-      clearInputs()
       if (user) {
+        clearInputs()
         setUser(user)
       } else {
         setUser("")
@@ -88,16 +83,6 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-      <div>
-          <HashRouter>
-              <Menu />
-          </HashRouter>
-        </div>
-      </header>
-      
-      <main>
-        <Routing />
         {user ? 
           <Hero handleLogout={handleLogout} />
          : 
@@ -114,7 +99,6 @@ function App() {
             passwordError={passwordError}
           />
         }
-      </main>
     </div>
   );
 }

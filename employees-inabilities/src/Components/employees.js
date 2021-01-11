@@ -3,7 +3,6 @@ import {fire2} from './login/firebase'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
 import "./employees.css"
-import 'react-datepicker/dist/react-datepicker.css'
 
 class Employees extends Component {
     state={
@@ -104,15 +103,15 @@ class Employees extends Component {
                                 <td>{this.state.data[i].cargo}</td>
                                 <td>{this.state.data[i].dui}</td>
                                 <td>
-                                    <button className="btn btn-primary btn-sm btn-insertar" onClick={() => this.seleccionarEmpleado(this.state.data[i], i, "Editar" )}>Editar</button>{"  "}
-                                    <button className="btn btn-danger btn-sm btn-insertar" onClick={() => this.seleccionarEmpleado(this.state.data[i], i, "Eliminar")}>Eliminar</button>
+                                    <button className="btn btn-primary btn-sm btn-insertar" onClick={() => this.seleccionarEmpleado(this.state.data[i], i, "Edit" )}>Edit</button>{"  "}
+                                    <button className="btn btn-danger btn-sm btn-insertar" onClick={() => this.seleccionarEmpleado(this.state.data[i], i, "Delete")}>Delete</button>
                                 </td>
                             </tr>
                         })}
                     </tbody>
                 </table>
                 <br/><br/>
-                <button className="btn btn-success btn-insertar" onClick={() =>this.setState({modalInsertar: true})}>Insertar</button>
+                <button className="btn btn-success btn-insertar" onClick={() =>this.setState({modalInsertar: true})}>Insert</button>
                 <br/><br/>
 
                 <Modal isOpen={this.state.modalInsertar} className="Modal">
@@ -141,8 +140,8 @@ class Employees extends Component {
                         </div>
                     </ModalBody>
                     <ModalFooter>
-                        <button className="btn btn-primary btn-sm btn-form" onClick={() =>this.peticionPost()}>Insertar</button>{"  "}
-                        <button className="btn btn-danger btn-sm btn-form" onClick={() => this.setState({modalInsertar: false})}>Cancelar</button>
+                        <button className="btn btn-primary btn-sm btn-form" onClick={() =>this.peticionPost()}>Insert</button>{"  "}
+                        <button className="btn btn-danger btn-sm btn-form" onClick={() => this.setState({modalInsertar: false})}>Cancel</button>
                     </ModalFooter>
                 </Modal>
 
@@ -172,8 +171,8 @@ class Employees extends Component {
                         </div>
                     </ModalBody>
                     <ModalFooter>
-                        <button className="btn btn-primary btn-sm btn-form" onClick={() =>this.peticionPut()}>Editar</button>{"  "}
-                        <button className="btn btn-danger btn-sm btn-form" onClick={() => this.setState({modalEditar: false})}>Cancelar</button>
+                        <button className="btn btn-primary btn-sm btn-form" onClick={() =>this.peticionPut()}>Edit</button>{"  "}
+                        <button className="btn btn-danger btn-sm btn-form" onClick={() => this.setState({modalEditar: false})}>Cancel</button>
                     </ModalFooter>
                 </Modal>
 

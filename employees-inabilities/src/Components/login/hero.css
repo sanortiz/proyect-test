@@ -1,0 +1,72 @@
+.hero {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .hero nav {
+    background:rgba(17, 27, 75, 0.9) ;
+    width: 100%;
+    height: 80px;
+    padding: 20px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .containerMenuButton {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+  }
+  
+  .hero nav p {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 30px;
+  }
+  
+  .hero nav button {
+    width: 110px;
+    height: 45px;
+    padding: 5px;
+    background: rgb(26, 165, 89);
+    color: #fff;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero ul li {
+    list-style: none;
+    display: inline;
+    margin-right: 15px;
+  }
+  
+#links {
+    text-decoration: none;
+    color: rgb(97, 233, 158);
+    font-weight: bold;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+#icon {
+    width: 15px;
+    height: auto;
+    color: rgb(97, 233, 158);
+    margin-right: 5px;
+}
+
+#icon2 {
+  margin-left: 5px;
+}
