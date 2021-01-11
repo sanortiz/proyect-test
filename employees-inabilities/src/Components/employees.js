@@ -1,9 +1,8 @@
 import React, {Component} from 'react'
-import firebase from './firebase';
+import {fire2} from './login/firebase'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
 import "./employees.css"
-import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 
 class Employees extends Component {
@@ -22,7 +21,7 @@ class Employees extends Component {
     }
 
     peticionGet = () => {
-        firebase.child("empleados").on("value", (empleado) => {
+        fire2.child("empleados").on("value", (empleado) => {
             if (empleado.val() !== null) {
                 this.setState({ ...this.state.data, data: empleado.val() })
             } else {
@@ -32,7 +31,7 @@ class Employees extends Component {
     }
 
     peticionPost = () => {
-        firebase.child("empleados").push(this.state.form,
+        fire2.child("empleados").push(this.state.form,
             error => {
                 if (error) {
                     console.log(error)
@@ -42,7 +41,7 @@ class Employees extends Component {
     }
 
     peticionPut = () => {
-        firebase.child(`empleados/${this.state.id}`).set(
+        fire2.child(`empleados/${this.state.id}`).set(
             this.state.form,
             error => {
                 if(error) console.log(error)
@@ -53,7 +52,7 @@ class Employees extends Component {
 
     peticionDelete = () => {
         if(window.confirm(`Estas seguro de querer eliminar el empleado ${this.state.form && this.state.form.nombre}?`)){
-            firebase.child(`empleados/${this.state.id}`).remove(
+            fire2.child(`empleados/${this.state.id}`).remove(
                 error=>{
                     if(error) console.log(error)
                 }
