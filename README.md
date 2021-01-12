@@ -1,10 +1,10 @@
-##GRUPO 1
+## GRUPO 1
 
 #### Sandra Peña Ortiz
 
-[TOCM]
+[ TOCM ]
 
-[TOC]
+[ TOC ]
 
 ### Creacion de estructura del proyecto
 
@@ -30,6 +30,7 @@
 
 ##Link a  Netlify
 <link> : https://bootcamp-proyect.netlify.app/
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4a9281c2-27b9-4eaa-bbae-0cc564a991e3/deploy-status)](https://app.netlify.com/sites/proyect-bootcamp/deploys)
 
 ####Credenciales
