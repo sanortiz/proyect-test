@@ -70,7 +70,7 @@ class Employees extends Component {
     seleccionarEmpleado = async (empleado, id, caso) => {
         await this.setState({form: empleado, id: id});
 
-        (caso === "Editar") 
+        (caso === "Edit") 
             ? this.setState({modalEditar: true}) 
             : this.peticionDelete();
     }
@@ -78,12 +78,11 @@ class Employees extends Component {
     componentDidMount(){
         this.peticionGet()
     }
-
     
     render(){
         return (
             <div className="Employees">
-                <table className="table table-responsive table table-hover table-sm d-inline">
+                <table className="table table-responsive table table-hover table-lg d-inline">
                     <thead className="thead-dark">
                         <tr>
                             <th>Codigo</th>
@@ -146,7 +145,7 @@ class Employees extends Component {
                 </Modal>
 
                 <Modal isOpen={this.state.modalEditar} className="Modal">
-                    <ModalHeader>Insertar Registro</ModalHeader>
+                    <ModalHeader>Editar Registro</ModalHeader>
                     <ModalBody>
                         <div className="form-group">
                             <label>Codigo: </label>

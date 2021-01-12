@@ -1,9 +1,5 @@
-.Employees{
-    margin-top: 8vh;
-}
-
 .title-header {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .Modal {
@@ -21,15 +17,15 @@
 }
 
 .btn-form {
-    width: auto;
-    height: auto;
+    width: 86px;
+    height: 40px;
     font-size: 16px;
     text-align: center;
 }
 
 .btn-insertar {
-    width: auto;
-    height: auto;
-    font-size: 22px;
+    width: 86px;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
 }
-
