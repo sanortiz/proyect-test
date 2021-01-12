@@ -2,8 +2,6 @@
 
 #### Sandra Peña Ortiz
 
-[ TOCM ]
-
 ### Creacion de estructura del proyecto
 
 `npm creat-react-app`
