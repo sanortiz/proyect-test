@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
 import "./inabilities.css"
 import "react-datepicker/dist/react-datepicker.css"
-import ReactDatePicker from 'react-datepicker';
 
 class inabilities extends Component {
 
@@ -13,7 +12,7 @@ class inabilities extends Component {
         modalInsertar: false,
         modalEditar: false,
         form:{
-            fechaIngreso: new Date(),
+            fechaIngreso: '',
             empleado: '',
             unidad: '',
             doctor: '',
@@ -129,11 +128,11 @@ class inabilities extends Component {
                         <div className="form-group">
                             <label>Fecha de ingreso: </label>
                             <br/>
-                            <ReactDatePicker className="form-control" selected={this.state.form.fechaIngreso} name="fechaIngreso" onChange={this.handleChange}/>
+                            <input type="text" className="form-control" name="fechaIngreso" onChange={this.handleChange}></input>
                             <br/>
                             <label>Empleado: </label>
                             <br/>
-                            <input className="form-control" name="empleado" onChange={this.handleChange}></input>
+                            <input type="text" className="form-control" name="empleado" onChange={this.handleChange}></input>
                             <br/>
                             <label>Unidad medica: </label>
                             <br/>
@@ -172,9 +171,7 @@ class inabilities extends Component {
                             <br/>
                             <label>Empleado: </label>
                             <br/>
-                            <select className="form-control" name="empleado" onChange={this.handleChange} value={this.state.form && this.state.form.empleado}>
-                                <option>{}</option>
-                            </select>
+                            <input type="text" className="form-control" name="empleado" onChange={this.handleChange} value={this.state.form && this.state.form.empleado}></input>
                             <br/>
                             <label>Unidad medica: </label>
                             <br/>
